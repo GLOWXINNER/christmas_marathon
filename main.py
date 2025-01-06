@@ -10,7 +10,7 @@ import re
 # Замените TOKEN на токен вашего бота
 BOT_TOKEN = "7715066464:AAES118WE5-c6z9gbsBhUpO8bkpUOjXDfkg"
 CHANNEL_ID = "@christmas_marathon"  # Укажите ID вашего канала
-ADMIN_IDS = [6402145279, 805240072]  # Укажите ID админов
+ADMIN_IDS = [6402145279]  # Укажите ID админов
 
 bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher(bot, storage=MemoryStorage())
