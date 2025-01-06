@@ -72,7 +72,7 @@ async def start_command(message: types.Message):
             parse_mode=ParseMode.MARKDOWN_V2
         )
 
-@dp.message_handler(lambda message: message.text == "🗂 Материалы" and message.from_user.id in ADMIN_IDS, state='*')
+@dp.message_handler(lambda message: message.text == "🗂 Материалы", state='*')
 async def create_article(message: types.Message):
     article_link1 = "https://telegra.ph/Tolkovanie-carskih-chasov-Sochelnika-01-06"
     article_link2 = "https://telegra.ph/Desyat-prorochestv-o-Rozhdestve-Hristovom-01-06"
@@ -99,7 +99,7 @@ async def create_article(message: types.Message):
     markup.add(InlineKeyboardButton("О чем надо думать на святках", url=article_link10))
     await message.answer("📚 Выберите интересующую Вас тему:", reply_markup=markup)
 
-@dp.message_handler(lambda message: message.text == "🔗 Социальные сети" and message.from_user.id in ADMIN_IDS, state='*')
+@dp.message_handler(lambda message: message.text == "🔗 Социальные сети", state='*')
 async def create_article(message: types.Message):
     article_link = "https://t.me/christmas_marathon"
     markup = InlineKeyboardMarkup()
