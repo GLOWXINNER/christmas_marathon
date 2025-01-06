@@ -74,29 +74,24 @@ async def start_command(message: types.Message):
 
 @dp.message_handler(lambda message: message.text == "🗂 Материалы", state='*')
 async def create_article(message: types.Message):
-    article_link1 = "https://telegra.ph/Tolkovanie-carskih-chasov-Sochelnika-01-06"
-    article_link2 = "https://telegra.ph/Desyat-prorochestv-o-Rozhdestve-Hristovom-01-06"
-    article_link3 = "https://telegra.ph/Rozhdestvo-Hristovo-glazami-novomuchenikov-01-06"
-    article_link4 = "https://telegra.ph/CHto-bylo-by-esli-by-ne-bylo-Rozhdestva-Hristova-01-06"
-    article_link5 = "https://telegra.ph/Rozhdestvo-Hristovo-v-zhivopisi-01-06"
-    article_link6 = "https://telegra.ph/Tolkovanie-glavnyh-pesnopenij-sluzhby-Rozhdestva-01-06"
-    article_link7 = "https://telegra.ph/Kak-razum-serdce-i-politika-gotovilis-k-Pervomu-Prishestviyu-Hrista-01-06"
-    article_link8 = "https://telegra.ph/Zashchitnik-Rozhdestva-01-06"
-    article_link9 = "https://telegra.ph/Prigotovlenie-mira-k-prishestviyu-Hrista-01-06"
-    article_link10 = "https://telegra.ph/ZHizn-Iisusa-Hrista-v-prorochestvah-Vethogo-Zaveta-01-06"
-    article_link11 = "https://telegra.ph/O-chem-nado-dumat-na-svyatkah-01-06"
+    article_links = [
+        ("Толкование царских часов Сочельника", "https://telegra.ph/Tolkovanie-carskih-chasov-Sochelnika-01-06"),
+        ("Десять пророчеств о Рождестве Христовом", "https://telegra.ph/Desyat-prorochestv-o-Rozhdestve-Hristovom-01-06"),
+        ("Рождество Христово глазами новомучеников", "https://telegra.ph/Rozhdestvo-Hristovo-glazami-novomuchenikov-01-06"),
+        ("Что было бы, если бы не было Рождества Христова", "https://telegra.ph/CHto-bylo-by-esli-by-ne-bylo-Rozhdestva-Hristova-01-06"),
+        ("Рождество Христово в живописи", "https://telegra.ph/Rozhdestvo-Hristovo-v-zhivopisi-01-06"),
+        ("Толкование главных песнопений службы Рождества", "https://telegra.ph/Tolkovanie-glavnyh-pesnopenij-sluzhby-Rozhdestva-01-06"),
+        ("Как разум, сердце и политика готовились к Первому Пришествию Христа", "https://telegra.ph/Kak-razum-serdce-i-politika-gotovilis-k-Pervomu-Prishestviyu-Hrista-01-06"),
+        ("Защитник Рождества", "https://telegra.ph/Zashchitnik-Rozhdestva-01-06"),
+        ("Приготовление мира к пришествию Христа", "https://telegra.ph/Prigotovlenie-mira-k-prishestviyu-Hrista-01-06"),
+        ("Жизнь Иисуса Христа в пророчествах Ветхого Завета", "https://telegra.ph/ZHizn-Iisusa-Hrista-v-prorochestvah-Vethogo-Zaveta-01-06"),
+        ("О чем надо думать на святках", "https://telegra.ph/O-chem-nado-dumat-na-svyatkah-01-06")
+    ]
+
     markup = InlineKeyboardMarkup()
-    markup.add(InlineKeyboardButton("Толкование царских часов Сочельника", url=article_link1))
-    markup.add(InlineKeyboardButton("Десять пророчеств о Рождестве Христовом", url=article_link2))
-    markup.add(InlineKeyboardButton("Рождество Христово глазами новомучеников", url=article_link3))
-    markup.add(InlineKeyboardButton("Что было бы, если бы не было Рождества Христова", url=article_link4))
-    markup.add(InlineKeyboardButton("Рождество Христово в живописи", url=article_link5))
-    markup.add(InlineKeyboardButton("Толкование главных песнопений службы Рождества", url=article_link6))
-    markup.add(InlineKeyboardButton("Как разум, сердце и политика готовились к Первому Пришествию Христа", url=article_link7))
-    markup.add(InlineKeyboardButton("Защитник Рождества", url=article_link8))
-    markup.add(InlineKeyboardButton("Приготовление мира к пришествию Христа", url=article_link9))
-    markup.add(InlineKeyboardButton("Жизнь Иисуса Христа в пророчествах Ветхого Завета", url=article_link10))
-    markup.add(InlineKeyboardButton("О чем надо думать на святках", url=article_link10))
+    for title, link in article_links:
+        markup.add(InlineKeyboardButton(title, url=link))
+    
     await message.answer("📚 Выберите интересующую Вас тему:", reply_markup=markup)
 
 @dp.message_handler(lambda message: message.text == "🔗 Социальные сети", state='*')
