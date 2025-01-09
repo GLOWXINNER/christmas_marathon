@@ -87,6 +87,8 @@ async def create_article(message: types.Message):
         ("Жизнь Иисуса Христа в пророчествах Ветхого Завета", "https://telegra.ph/ZHizn-Iisusa-Hrista-v-prorochestvah-Vethogo-Zaveta-01-06"),
         ("О чем надо думать на святках", "https://telegra.ph/O-chem-nado-dumat-na-svyatkah-01-06"),
         ("Курс лекций о Рождестве Христовом", "https://teletype.in/@glowxinner/nLWAm3kw0KP"),
+        ("За несколько минут до креста Христос открыл зачем Он Родился.", "https://telegra.ph/Za-neskolko-minut-do-kresta-Hristos-otkryl-zachem-On-Rodilsya-01-09"),
+        ("Рождество и Голгофа", "https://telegra.ph/Rozhdestvo-i-Golgofa-01-09"),
     ]
 
     markup = InlineKeyboardMarkup()
