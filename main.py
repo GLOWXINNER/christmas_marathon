@@ -89,6 +89,7 @@ async def create_article(message: types.Message):
         ("Курс лекций о Рождестве Христовом", "https://teletype.in/@glowxinner/nLWAm3kw0KP"),
         ("За несколько минут до креста Христос открыл зачем Он Родился.", "https://telegra.ph/Za-neskolko-minut-do-kresta-Hristos-otkryl-zachem-On-Rodilsya-01-09"),
         ("Рождество и Голгофа", "https://telegra.ph/Rozhdestvo-i-Golgofa-01-09"),
+        ("Григорий Богослов. Слово 38 на Рождество Христово.", "https://teletype.in/@glowxinner/5UwkloDAHkH"),
     ]
 
     markup = InlineKeyboardMarkup()
@@ -100,8 +101,10 @@ async def create_article(message: types.Message):
 @dp.message_handler(lambda message: message.text == "🔗 Социальные сети", state='*')
 async def create_article(message: types.Message):
     article_link = "https://t.me/christmas_marathon"
+    article_link2 = "https://www.youtube.com/channel/UCHCU9CbRf859DheRK_o1vNA"
     markup = InlineKeyboardMarkup()
     markup.add(InlineKeyboardButton("Telegram канал", url=article_link))
+    markup.add(InlineKeyboardButton("YouTube", url=article_link2))
     await message.answer("📱 Социальные сети", reply_markup=markup)
 
 
