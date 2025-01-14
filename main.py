@@ -92,6 +92,7 @@ async def create_article(message: types.Message):
         ("Григорий Богослов. Слово 38 на Рождество Христово", "https://teletype.in/@glowxinner/5UwkloDAHkH"),
         ("Лев Великий. Слова на Рождество Христово", "https://teletype.in/@glowxinner/D2Jw84Xehzf"),
         ("Факты, которые нужно знать об Обрезании Господа", "https://telegra.ph/Fakty-kotorye-nuzhno-znat-ob-Obrezanii-Gospoda-01-14"),
+        ("Василий Великий. Гомилия на Рождество Христово", "https://teletype.in/@glowxinner/3Sm00fTDw1x"),
     ]
 
     markup = InlineKeyboardMarkup()
