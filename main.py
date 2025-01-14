@@ -89,7 +89,8 @@ async def create_article(message: types.Message):
         ("Курс лекций о Рождестве Христовом", "https://teletype.in/@glowxinner/nLWAm3kw0KP"),
         ("За несколько минут до креста Христос открыл зачем Он Родился.", "https://telegra.ph/Za-neskolko-minut-do-kresta-Hristos-otkryl-zachem-On-Rodilsya-01-09"),
         ("Рождество и Голгофа", "https://telegra.ph/Rozhdestvo-i-Golgofa-01-09"),
-        ("Григорий Богослов. Слово 38 на Рождество Христово.", "https://teletype.in/@glowxinner/5UwkloDAHkH"),
+        ("Григорий Богослов. Слово 38 на Рождество Христово", "https://teletype.in/@glowxinner/5UwkloDAHkH"),
+        ("Лев Великий. Слова на Рождество Христово", "https://teletype.in/@glowxinner/D2Jw84Xehzf"),
     ]
 
     markup = InlineKeyboardMarkup()
